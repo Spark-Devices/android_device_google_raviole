@@ -1,6 +1,9 @@
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/google/raviole/overlay-lineage
 
+# PowerShare
+include hardware/google/pixel/powershare/device.mk
+
 # Touch
 include hardware/google/pixel/touch/device.mk
 
