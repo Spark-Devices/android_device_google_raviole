@@ -200,8 +200,8 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 
 # Keyboard side padding in dp for portrait mode
-PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_r=11
-PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_l=11
+PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_r=4
+PRODUCT_PRODUCT_PROPERTIES += ro.com.google.ime.kb_pad_port_l=4
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
