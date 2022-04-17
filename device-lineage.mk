@@ -104,3 +104,5 @@ WITH_GMS := true
 
 # Properties
 TARGET_VENDOR_PROP := device/google/raviole/vendor.prop
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.sys.disable_rescue=true
