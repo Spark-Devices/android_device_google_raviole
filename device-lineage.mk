@@ -19,6 +19,9 @@ TARGET_SUPPORTS_QUICK_TAP := true
 # Touch
 include hardware/google/pixel/touch/device.mk
 
+# UDFPS
+TARGET_HAS_UDFPS := true
+
 # Libraries required for vendor
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor:64 \
