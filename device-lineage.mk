@@ -1,6 +1,9 @@
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += device/google/raviole/overlay-lineage
 
+# Touch
+include hardware/google/pixel/touch/device.mk
+
 # Libraries required for vendor
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor:64 \
