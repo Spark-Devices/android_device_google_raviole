@@ -89,5 +89,9 @@ PRODUCT_PACKAGES += \
 # Parts
 $(call inherit-product-if-exists, vendor/google/pixelparts/pixelparts.mk)
 
+# Gapps
+$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+WITH_GMS := true
+
 # Properties
 TARGET_VENDOR_PROP := device/google/raviole/vendor.prop
