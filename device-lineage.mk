@@ -16,6 +16,8 @@ include hardware/google/pixel/powershare/device.mk
 
 # Quick Tap
 TARGET_SUPPORTS_QUICK_TAP := true
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+persist.columbus.use_ap_sensor=false
 
 # Touch
 include hardware/google/pixel/touch/device.mk
