@@ -6,6 +6,13 @@ PRODUCT_PACKAGES += \
     EuiccSupportPixelOverlay \
     NowPlayingOverlay
 
+# ADB
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.adb.secure=0 \
+    persist.sys.usb.config=mtp,adb \
+    persist.service.debuggable=1 \
+    persist.service.adb.enable=1
+
 # Camera
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.vendor.camera.extensions.package=com.google.android.apps.camera.services \
