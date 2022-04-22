@@ -7,9 +7,17 @@ PRODUCT_PACKAGES += \
     NowPlayingOverlay
 
 # Camera
+PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
+PRODUCT_PACKAGES += \
+    GoogleCamera
+
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.vendor.camera.extensions.package=com.google.android.apps.camera.services \
     ro.vendor.camera.extensions.service=com.google.android.apps.camera.services.extensions.service.PixelExtensions
+
+# Parts
+PRODUCT_PACKAGES += \
+    GoogleParts
 
 # PowerShare
 include hardware/google/pixel/powershare/device.mk
@@ -94,9 +102,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ImsServiceEntitlement \
     Iwlan
-
-# Parts
-$(call inherit-product-if-exists, vendor/google/pixelparts/pixelparts.mk)
 
 # Gapps
 $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
