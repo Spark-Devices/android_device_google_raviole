@@ -26,4 +26,4 @@ else
   -include vendor/google_devices/oriole/proprietary/BoardConfigVendor.mk
 endif
 
-include device/google/raviole/oriole/BoardConfigLineage.mk
+include device/google/raviole/oriole/BoardConfigSpark.mk

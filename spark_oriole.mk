@@ -2,15 +2,15 @@
 TARGET_SCREEN_HEIGHT := 2280
 TARGET_SCREEN_WIDTH := 1080
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common SparkOS stuff.
+$(call inherit-product, vendor/spark/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/google/raviole/aosp_oriole_64.mk)
-$(call inherit-product, device/google/raviole/device-lineage.mk)
+$(call inherit-product, device/google/raviole/device-spark.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := lineage_oriole
+PRODUCT_NAME := spark_oriole
 PRODUCT_MODEL := Pixel 6
 PRODUCT_BRAND := google
 
