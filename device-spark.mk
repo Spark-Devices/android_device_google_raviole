@@ -1,5 +1,5 @@
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += device/google/raviole/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += device/google/raviole/overlay-spark
 
 # RRO Overlays
 PRODUCT_PACKAGES += \
@@ -7,28 +7,14 @@ PRODUCT_PACKAGES += \
     NowPlayingOverlay
 
 # Camera
-PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
-PRODUCT_PACKAGES += \
-    GoogleCamera
-
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.vendor.camera.extensions.package=com.google.android.apps.camera.services \
     ro.vendor.camera.extensions.service=com.google.android.apps.camera.services.extensions.service.PixelExtensions
-
-# Parts
-PRODUCT_PACKAGES += \
-    GoogleParts
-
-# PowerShare
-include hardware/google/pixel/powershare/device.mk
 
 # Quick Tap
 TARGET_SUPPORTS_QUICK_TAP := true
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 persist.columbus.use_ap_sensor=false
-
-# Touch
-include hardware/google/pixel/touch/device.mk
 
 # UDFPS
 TARGET_HAS_UDFPS := true
@@ -103,9 +89,12 @@ PRODUCT_PACKAGES += \
     ImsServiceEntitlement \
     Iwlan
 
+# Parts
+$(call inherit-product-if-exists, vendor/google/pixelparts/pixelparts.mk)
+
 # Gapps
 $(call inherit-product-if-exists, vendor/gms/products/gms.mk)
-WITH_GMS := true
+WITH_GAPPS := true
 
 # Properties
 TARGET_VENDOR_PROP := device/google/raviole/vendor.prop
