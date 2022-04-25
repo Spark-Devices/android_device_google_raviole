@@ -30,4 +30,15 @@
     <!-- List of comma separated package names for which we the system will not show crash, ANR,
          etc. dialogs. -->
     <string translatable="false" name="config_appsNotReportingCrashes">com.android.statementservice,com.android.systemui,com.google.android.euicc,com.google.euiccpixel</string>
+
+<!-- Recents text and image selection for Pixel Launcher (not supported by Launcher3) -->
+    <string name="config_defaultContentSuggestionsService" translatable="false">com.google.android.
+as/com.google.android.apps.miphone.aiai.app.AiAiContentSuggestionsService</string>
+
+<!-- The properties of a UDFPS sensor in pixels -->
+    <integer-array name="config_udfps_sensor_props">
+      <item>720</item>  <!-- sensorLocationX -->
+      <item>2364</item> <!-- sensorLocationY -->
+      <item>142</item>  <!-- sensorRadius -->
+    </integer-array>
 </resources>
