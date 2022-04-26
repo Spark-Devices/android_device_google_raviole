@@ -99,6 +99,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.gs101
 
+# Propperties - product
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
+
 # Telephony
 PRODUCT_PACKAGES += \
     ImsServiceEntitlement \
