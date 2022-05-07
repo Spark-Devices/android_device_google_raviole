@@ -16,8 +16,17 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # artifacts
 $(call inherit-product, device/google/raviole/artifacts.mk)
 
-# Camera
+# GMS
+WITH_GAPPS := true
+$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
+
+# Properties - system
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.disable_rescue=true
+
+# Propperties - product
 PRODUCT_PRODUCT_PROPERTIES += \
+    ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural \
     ro.vendor.camera.extensions.package=com.google.android.apps.camera.services \
     ro.vendor.camera.extensions.service=com.google.android.apps.camera.services.extensions.service.PixelExtensions
 
@@ -95,29 +104,17 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml \
     frameworks/native/data/etc/android.hardware.telephony.ims.singlereg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.singlereg.xml
 
-# Parts
-$(call inherit-product-if-exists, vendor/google/pixelparts/pixelparts.mk)
-
 # Powershare
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.gs101
-
-# Properties - system
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.disable_rescue=true
-
-# Propperties - product
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
 
 # Telephony
 PRODUCT_PACKAGES += \
     ImsServiceEntitlement \
     Iwlan
 
+# Parts
+$(call inherit-product-if-exists, vendor/google/pixelparts/pixelparts.mk)
+
 # Vendor Properties
 TARGET_VENDOR_PROP := device/google/raviole/vendor.prop
-
-# Vendor provides gms
-WITH_GAPPS := true
-$(call inherit-product-if-exists, vendor/gms/products/gms.mk)
