@@ -1044,7 +1044,7 @@ vendor/firmware/google/edgetpu-abrolhos.fw
 -vendor/lib64/libmetrics_logger.so
 
 # Google HBM Service
--system_ext/priv-app/HbmSVManager/HbmSVManager.apk
+-system_ext/priv-app/HbmSVManager/HbmSVManager.apk|2e95155fe61517ea72a0725ffb5e61117cde4abbe13e4353d91856be92e5acbb
 -system_ext/lib64/libhbmsvmanager_jni.so
 
 # Google Music Detector
