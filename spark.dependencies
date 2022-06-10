@@ -1,10 +1,50 @@
 [
-  {
-    "repository": "android_device_google_gs101",
-    "target_path": "device/google/gs101"
-  },
-  {
-    "repository": "android_device_google_raviole-kernel",
-    "target_path": "device/google/raviole-kernel"
-  }
+    {
+        "remote": "devices",
+        "repository": "android_device_google_gs101",
+        "target_path": "device/google/gs101",
+        "branch": "spark"
+    },
+    {
+        "remote": "statix",
+        "repository": "android_device_google_gs101-sepolicy",
+        "target_path": "device/google/gs101-sepolicy",
+        "branch": "sc-v2"
+    },
+    {
+        "remote": "devices",
+        "repository": "android_device_google_raviole",
+        "target_path": "device/google/raviole",
+        "branch": "spark"
+    },
+    {
+        "remote": "devices",
+        "repository": "android_device_google_raven",
+        "target_path": "device/google/raven",
+        "branch": "spark"
+    },
+    {
+        "remote": "devices",
+        "repository": "android_device_google_gs101",
+        "target_path": "device/google/gs101",
+        "branch": "spark"
+    },
+    {
+        "remote": "statix",
+        "repository": "android_vendor_google_interfaces",
+        "target_path": "vendor/google/interfaces",
+        "branch": "sc-v2"
+    },
+    {
+        "remote": "statix-gitlab",
+        "repository": "android_vendor_google_pixelparts",
+        "target_path": "vendor/google/pixelparts",
+        "branch": "sc-v2"
+    },
+    {
+        "remote": "devices",
+        "repository": "android_vendor_google_raven",
+        "target_path": "vendor/google/raven",
+        "branch": "spark"
+    }
 ]
