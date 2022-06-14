@@ -22,11 +22,5 @@
         "repository": "android_device_google_gs101",
         "target_path": "device/google/gs101",
         "branch": "spark"
-    },
-    {
-        "remote": "devices",
-        "repository": "android_vendor_google_raven",
-        "target_path": "vendor/google/raven",
-        "branch": "spark"
     }
 ]
