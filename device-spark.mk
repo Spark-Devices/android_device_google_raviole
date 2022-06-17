@@ -16,7 +16,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # artifacts
 $(call inherit-product, device/google/raviole/artifacts.mk)
 
-# Properties - system
+# Property overrides - system
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.disable_rescue=true
 
@@ -110,6 +110,11 @@ PRODUCT_PACKAGES += \
 
 # Parts
 $(call inherit-product-if-exists, vendor/google/pixelparts/pixelparts.mk)
+
+# SparkOS device maintainer metadata
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.spark.maintainer=Albinoman887
+    ro.spark.maintainer.username=Albinoman887
 
 # Vendor Properties
 TARGET_VENDOR_PROP := device/google/raviole/vendor.prop
