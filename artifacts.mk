@@ -71,4 +71,5 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/lib64/libssh.so \
     system/priv-app/GoogleExtServices/GoogleExtServices.apk \
     system/usr/keylayout/Vendor_045e_Product_0719.kl \
-    system/etc/init/smartcharge-init.rc
+    system/etc/init/smartcharge-init.rc \
+    system/fonts/RobotoFallback-VF.ttf
